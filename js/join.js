@@ -1,6 +1,6 @@
 // If your website is online, put its address here, for example "https://yourname.github.io/scape/"
 // If this is left empty, the link of the page you are viewing is shared instead.
-const SITE_URL = "";
+const SITE_URL = "https://gowthamsrinivasmalla.github.io/wd/";
 
 const PLEDGES = [
   { id: "p1", text: "Walk, cycle or use public transport more" },
