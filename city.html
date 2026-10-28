@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build Your City - SCAPE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/city.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>SCAPE<small>Sustainable City Awareness Programme</small></span>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Footprint</a></li>
+      <li><a href="facts.html">Smart City Facts</a></li>
+      <li><a href="trash.html">Sort the Trash</a></li>
+      <li><a href="city.html">Build a City</a></li>
+      <li><a href="join.html" class="cta">Join the Mission</a></li>
+    </ul>
+  </nav>
+
+  <main class="builder">
+    <div class="builder-head">
+      <h1>Build Your City</h1>
+      <p>Pick a piece, then click a plot to place it. Plots and coins are limited, and your city needs at least 50 residents.</p>
+    </div>
+
+    <div class="layout">
+      <aside class="toolbox">
+        <div class="coins" id="coins">Coins: 400</div>
+        <h3>Pieces</h3>
+        <div id="tools"></div>
+        <p class="tip-note">Double-click a placed piece to remove it and get your coins back.</p>
+      </aside>
+
+      <section class="board" id="board"></section>
+
+      <aside class="stats">
+        <div class="ring" id="ring"><div><strong id="score">0</strong><span>Sustainability</span></div></div>
+        <div class="rating" id="rating">Just starting</div>
+        <div class="people" id="people">Residents: 0 / 50 needed</div>
+
+        <div class="meter"><div class="top"><span>Clean energy</span><span id="energyVal">0%</span></div><div class="track"><i id="energyBar"></i></div></div>
+        <div class="meter"><div class="top"><span>Greenery</span><span id="greenVal">0%</span></div><div class="track"><i id="greenBar"></i></div></div>
+        <div class="meter"><div class="top"><span>Transport</span><span id="moveVal">0%</span></div><div class="track"><i id="moveBar"></i></div></div>
+
+        <div class="hint" id="hint"></div>
+        <button class="btn btn-teal" id="finishBtn">Finish my city</button>
+        <button class="btn btn-ghost" id="resetBtn">Start over</button>
+      </aside>
+    </div>
+
+    <!-- Result -->
+    <div class="overlay hide" id="endScreen">
+      <div class="panel">
+        <h2 id="endTitle"></h2>
+        <div class="big" id="endScore">0</div>
+        <p>Sustainability score out of 100</p>
+        <p id="endStats"></p>
+        <div class="row">
+          <button class="btn btn-ghost" id="keepBtn">Keep building</button>
+          <a href="join.html" class="btn btn-pink">Join the mission</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>SCAPE</strong> - Sustainable City Awareness Programme</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/city.js"></script>
+</body>
+</html>

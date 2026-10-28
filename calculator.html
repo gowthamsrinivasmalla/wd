@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carbon Footprint Calculator - SCAPE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>SCAPE<small>Sustainable City Awareness Programme</small></span>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Footprint</a></li>
+      <li><a href="facts.html">Smart City Facts</a></li>
+      <li><a href="trash.html">Sort the Trash</a></li>
+      <li><a href="city.html">Build a City</a></li>
+      <li><a href="join.html" class="cta">Join the Mission</a></li>
+    </ul>
+  </nav>
+
+  <main class="calc-page">
+    <div class="calc-card">
+      <h1>Carbon Footprint Calculator</h1>
+      <p class="sub">Six quick questions. Tap an answer to continue.</p>
+
+      <div class="progress"><span id="bar"></span></div>
+
+      <!-- Questions -->
+      <div id="quiz">
+        <p class="step-label" id="stepLabel"></p>
+        <h2 class="question" id="question"></h2>
+        <div class="options" id="options"></div>
+        <button class="back-btn" id="backBtn" hidden>Back</button>
+      </div>
+
+      <!-- Result -->
+      <div class="result" id="result">
+        <div class="result-top">
+          <div class="gauge">
+            <svg viewBox="0 0 240 130">
+              <path class="track" d="M 20 120 A 100 100 0 0 1 220 120"/>
+              <path class="fill" id="fill" d="M 20 120 A 100 100 0 0 1 220 120"/>
+            </svg>
+            <div class="gauge-num"><strong id="total">0</strong><span>tonnes of CO₂ per year</span></div>
+          </div>
+          <div class="verdict">
+            <h2 id="label"></h2>
+            <p id="msg"></p>
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <h3>Where it comes from</h3>
+          <div id="rows"></div>
+        </div>
+
+        <div class="tips" id="tipBox"></div>
+
+        <div class="result-actions">
+          <a href="facts.html" class="btn btn-teal">Learn more facts</a>
+          <a href="join.html" class="btn btn-pink">Join the mission</a>
+          <button class="btn btn-ghost" id="retake">Recalculate</button>
+        </div>
+        <p class="note">This is an estimate based on average values, meant to raise awareness, not an exact measurement.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>SCAPE</strong> - Sustainable City Awareness Programme</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>

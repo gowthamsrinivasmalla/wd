@@ -1,0 +1,89 @@
+/* ===== Calculator page ===== */
+.calc-page {
+  min-height: 86vh;
+  padding: 60px 6vw;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 245, 212, 0.14), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(247, 37, 133, 0.16), transparent 40%),
+    var(--navy);
+}
+.calc-card {
+  width: 100%;
+  max-width: 980px;
+  padding: 44px 50px;
+  border-radius: 28px;
+  background: var(--navy-2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.calc-card h1 { font-size: 2.4rem; margin-bottom: 6px; }
+.calc-card .sub { color: var(--muted); margin-bottom: 28px; }
+
+.progress { height: 10px; border-radius: 10px; background: #0b1030; overflow: hidden; margin-bottom: 8px; }
+.progress span {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--teal), var(--yellow), var(--magenta));
+  transition: width 0.4s ease;
+}
+.step-label { color: var(--muted); margin-bottom: 26px; }
+
+.question { font-size: 1.9rem; font-weight: 800; margin-bottom: 24px; }
+.options { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+.option {
+  padding: 24px 16px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background: #0b1030;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.option .emoji { display: block; font-size: 2.4rem; margin-bottom: 8px; }
+.option small { display: block; color: var(--muted); font-weight: 400; margin-top: 4px; }
+.option:hover { transform: translateY(-4px); border-color: var(--teal); box-shadow: 0 0 22px rgba(0, 245, 212, 0.35); }
+.option.picked { border-color: var(--yellow); background: #1c2260; }
+
+.back-btn {
+  margin-top: 26px;
+  background: none; border: none;
+  color: var(--muted); font-family: inherit; font-size: 1rem; cursor: pointer;
+}
+.back-btn:hover { color: var(--text); }
+.back-btn[hidden] { display: none; }
+
+/* ===== Result ===== */
+.result { display: none; }
+.result.show { display: block; }
+.result-top { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; margin-bottom: 30px; }
+
+.gauge { position: relative; width: 300px; }
+.gauge svg { width: 100%; display: block; }
+.gauge .track { fill: none; stroke: #0b1030; stroke-width: 22; stroke-linecap: round; }
+.gauge .fill {
+  fill: none; stroke: var(--teal); stroke-width: 22; stroke-linecap: round;
+  stroke-dasharray: 314; stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.2, 0.8, 0.2, 1), stroke 0.4s;
+}
+.gauge-num { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; }
+.gauge-num strong { font-size: 3rem; line-height: 1; }
+.gauge-num span { display: block; color: var(--muted); }
+
+.verdict h2 { font-size: 2.2rem; margin-bottom: 6px; }
+.verdict p { color: var(--muted); max-width: 420px; }
+
+.breakdown { margin-bottom: 30px; }
+.breakdown h3, .tips h3 { margin-bottom: 14px; font-size: 1.3rem; }
+.bar-row { display: grid; grid-template-columns: 130px 1fr 80px; gap: 14px; align-items: center; margin-bottom: 10px; }
+.bar-row .bar { height: 14px; border-radius: 10px; background: #0b1030; overflow: hidden; }
+.bar-row .bar i { display: block; height: 100%; width: 0; border-radius: 10px; transition: width 1.2s ease; }
+.bar-row em { font-style: normal; color: var(--muted); text-align: right; }
+
+.tips { padding: 24px 28px; border-radius: 18px; background: #0b1030; margin-bottom: 28px; }
+.tips p { margin-bottom: 8px; }
+.note { color: var(--muted); font-size: 0.9rem; margin-top: 20px; }
+.result-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-ghost { background: transparent; color: var(--text); border: 2px solid var(--muted); }

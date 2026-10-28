@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sort the Trash - SCAPE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/trash.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>SCAPE<small>Sustainable City Awareness Programme</small></span>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Footprint</a></li>
+      <li><a href="facts.html">Smart City Facts</a></li>
+      <li><a href="trash.html">Sort the Trash</a></li>
+      <li><a href="city.html">Build a City</a></li>
+      <li><a href="join.html" class="cta">Join the Mission</a></li>
+    </ul>
+  </nav>
+
+  <main class="game">
+    <h1>Sort the Trash</h1>
+    <p class="sub">Drag each item into the right bin before time runs out.</p>
+
+    <div class="hud">
+      <div>Score<strong id="score">0</strong></div>
+      <div class="time" id="timeBox">Time left<strong id="time">60</strong></div>
+      <div>Items left<strong id="left">12</strong></div>
+    </div>
+
+    <div class="tray" id="tray"></div>
+
+    <div class="bins">
+      <div class="bin" data-bin="recycle">
+        <div class="lid"></div>
+        <div class="body"><span class="ic">♻️</span><b>Recycle</b><small>Plastic, paper, metal</small></div>
+      </div>
+      <div class="bin organic" data-bin="organic">
+        <div class="lid"></div>
+        <div class="body"><span class="ic">🍂</span><b>Organic</b><small>Food and garden waste</small></div>
+      </div>
+      <div class="bin ewaste" data-bin="ewaste">
+        <div class="lid"></div>
+        <div class="body"><span class="ic">🔌</span><b>E-waste</b><small>Batteries and electronics</small></div>
+      </div>
+    </div>
+
+    <!-- Start screen -->
+    <div class="overlay" id="startScreen">
+      <div class="panel">
+        <h2>Ready to sort?</h2>
+        <p>You have 60 seconds. Drag each item into the correct bin.</p>
+        <p>Right bin: +10 points. Wrong bin: -5 points.</p>
+        <div class="row"><button class="btn btn-teal" id="startBtn">Start game</button></div>
+      </div>
+    </div>
+
+    <!-- End screen -->
+    <div class="overlay hide" id="endScreen">
+      <div class="panel">
+        <h2 id="endTitle"></h2>
+        <div class="big" id="endScore">0</div>
+        <p id="endStats"></p>
+        <p>Batteries and old phones should never go in regular bins. They hold materials that harm soil and water.</p>
+        <div class="row">
+          <button class="btn btn-ghost" id="againBtn">Play again</button>
+          <a href="city.html" class="btn btn-pink">Build your city</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>SCAPE</strong> - Sustainable City Awareness Programme</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/trash.js"></script>
+</body>
+</html>

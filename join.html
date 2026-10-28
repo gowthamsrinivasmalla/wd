@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Mission - SCAPE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span>SCAPE<small>Sustainable City Awareness Programme</small></span>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Footprint</a></li>
+      <li><a href="facts.html">Smart City Facts</a></li>
+      <li><a href="trash.html">Sort the Trash</a></li>
+      <li><a href="city.html">Build a City</a></li>
+      <li><a href="join.html" class="cta">Join the Mission</a></li>
+    </ul>
+  </nav>
+
+  <main class="join">
+    <div class="join-head">
+      <h1>Join the Mission</h1>
+      <p>Make your pledge and get your own certificate.</p>
+    </div>
+
+    <div class="join-grid">
+      <form class="form-card" id="pledgeForm" novalidate>
+        <h2>Your details</h2>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" placeholder="Type your name" maxlength="40" autocomplete="name">
+        </div>
+
+        <fieldset class="pledges">
+          <legend>I pledge to (choose at least one)</legend>
+          <div id="pledgeList"></div>
+        </fieldset>
+
+        <p class="error" id="error" role="alert"></p>
+        <button type="submit" class="btn btn-pink">Get my certificate</button>
+        <p class="thanks" id="thanks"></p>
+      </form>
+
+      <section class="cert-card">
+        <canvas id="cert" width="1200" height="850"></canvas>
+        <div class="cert-actions">
+          <button class="btn btn-teal" id="downloadBtn" disabled>Download certificate</button>
+          <a class="btn btn-pink off" id="shareBtn" href="#">Share the website by email</a>
+        </div>
+        <p class="cert-note">The share button opens your email app with the website link ready to send.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p><strong>SCAPE</strong> - Sustainable City Awareness Programme</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/join.js"></script>
+</body>
+</html>
